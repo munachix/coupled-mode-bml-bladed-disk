@@ -1,0 +1,15 @@
+{
+  "generated_utc": "2026-08-29T04:20:07.342894+00:00",
+  "hard_constraint": "PyMAPDL/ANSYS is NOT available in THIS run of step9.py (it only exercises the ANSYS-free parts, Case 1 + harness self-test) -- but IS available on this machine in general, and Cases 2-4 below were run for real, separately, via their own driver functions/scripts, with results cached in this same output/ directory.",
+  "case_status": {
+    "1_tuned_linear": "DONE -- cross-referenced from Step 2 (already validated there)",
+    "2_mistuned_linear": "DONE -- real ANSYS extraction run (Section 8b/8c/9d), case2_comparison.npz cached",
+    "3_mistuned_nonlinear": "DONE, EXTENSIVELY -- real ANSYS static K3 for 70/24 1B-cluster modes + real cross-coupling for 51 mode pairs (Section 8h/9i/9j/9k), case3_k3_identification_mode*.npz + case3_cross_k3_modes*.npz cached",
+    "4_bpinn_reconstructed": "DONE -- real ANSYS reconstruction (Section 8h/9d), case4_comparison.npz cached"
+  },
+  "comparison_harness_selftest": {
+    "freq_err_recovery_exact": true,
+    "mac_identity_exact": true
+  },
+  "note": "This step9.py __main__ run only executes the parts needing no live ANSYS session (Case 1 cross-reference, comparison-harness self-test). Cases 2-4 are real, ANSYS-verified results from this session's own separate campaigns (see PROJECT_STATUS.md Sections 8-9 for the full history), not specs -- their outputs are cached in output/ and read directly by make_case3_figure(), make_case3_cross_coupling_figure(), and make_multimode_bpinn_ansys_figure() rather than being re-run here."
+}

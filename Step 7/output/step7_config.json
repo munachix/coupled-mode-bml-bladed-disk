@@ -1,0 +1,62 @@
+{
+  "generated_utc": "2026-08-28T07:55:48.398994+00:00",
+  "holdout": {
+    "n_prior_pool": 950,
+    "n_holdout": 50,
+    "primary_case_idx": 0,
+    "n_coverage_trials": 20
+  },
+  "measurement": {
+    "sigma_hz": 0.3
+  },
+  "mcmc": {
+    "n_chains": 4,
+    "n_warmup": 2000,
+    "n_samples": 4000,
+    "adapt_start": 100,
+    "adapt_interval": 50,
+    "adapt_shrinkage": 0.3,
+    "cov_reg": 1e-06,
+    "coverage_n_warmup": 1000,
+    "coverage_n_samples": 2000,
+    "posterior_inflation": 1.126
+  },
+  "identifiability_condition_number": 34872.31752482371,
+  "prior_identifiable_subspace_K": 13,
+  "primary_result": {
+    "recovery_corr": 0.8719463346506049,
+    "recovery_rmse": 0.005885013636452606,
+    "max_rhat": 1.0083833361580075,
+    "min_ess": 250.9145579836099
+  },
+  "coverage_at_95pct": 0.9666666666666667,
+  "bpinn_reconstruction_r2": 0.9717932609720027,
+  "bpinn_reconstruction_r2_mean": 0.9583769909936652,
+  "bpinn_reconstruction_r2_per_mode": {
+    "0": 0.9717932609720027,
+    "1": 0.9698342340591598,
+    "3": 0.820752563355922,
+    "4": 0.8140937648512957,
+    "5": 0.9465430844906952,
+    "6": 0.9060819344721265,
+    "7": 0.9645221746834125,
+    "8": 0.9489435180266701,
+    "9": 0.9437643801845689,
+    "10": 0.9467352715866859,
+    "11": 0.9905052878454786,
+    "12": 0.9964003351010352,
+    "13": 0.972441285481087,
+    "14": 0.9881820490481947,
+    "15": 0.989535582906326,
+    "16": 0.9932704312343851,
+    "17": 0.9835609953729398,
+    "18": 0.986638140389047,
+    "19": 0.9918710162854345,
+    "20": 0.9620454345058572,
+    "21": 0.9654663563722274,
+    "22": 0.9866346944994853,
+    "23": 0.96401037424724,
+    "2": 0.997421613876688
+  },
+  "note": "Inverts against the full 24-mode 1B-cluster frequency response (not mode-0 alone) to identify per-blade fractional-frequency mistuning (df_b/f, 24-dim) -- the finest-grained quantity the Step 4 forward model is actually sensitive to. The underlying 5-variable-per-blade geometric split (theta itself) is not identifiable even in principle: Step 4's own sensitivity model already collapses it before anything else touches it. Observed data y is SYNTHETIC (no real experimental data exists in this project): a known held-out Step 3 mistuning sample run through the exact forward model plus documented placeholder measurement noise. See CONFIG and module docstring in step7.py."
+}

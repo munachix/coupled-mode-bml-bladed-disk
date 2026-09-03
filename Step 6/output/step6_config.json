@@ -1,0 +1,37 @@
+{
+  "generated_utc": "2026-08-29T03:52:54.809106+00:00",
+  "network": {
+    "hidden_sizes": [
+      32,
+      32
+    ],
+    "prior_sigma": 1.0,
+    "kl_beta": 0.001,
+    "fourier_w_freqs": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      50,
+      100,
+      200,
+      400
+    ]
+  },
+  "training": {
+    "epochs": 6000,
+    "lr": 0.003,
+    "lambda_physics": 0.05,
+    "lambda_bc": 1.0,
+    "anneal_frac": 0.3,
+    "n_mc_train": 3,
+    "n_mc_eval": 40
+  },
+  "target_peak_frac_qref": 0.8,
+  "test_r2": 0.9980899808098971,
+  "test_rmse": 0.0017511731813232316,
+  "test_calibration_within_2sigma": 1.0,
+  "test_hbm_residual_rms": 0.003263053594288223,
+  "note": "Inputs scoped to forcing frequency + reduced mistuning-pattern features only -- rotation speed/temperature/stress from the roadmap's Phase 7 list are NOT modeled anywhere in this project and were not fabricated here. Forcing level is a documented visualization/scope choice matching Step 4. See CONFIG in step6.py."
+}

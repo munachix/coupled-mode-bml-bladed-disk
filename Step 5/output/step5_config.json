@@ -1,0 +1,16 @@
+{
+  "generated_utc": "2026-08-29T04:08:06.273453+00:00",
+  "n_samples": 1000,
+  "n_sec": 70,
+  "epistemic_prior": {
+    "coeff_relative_std": 0.106,
+    "n_draws": 50
+  },
+  "gp_config": {
+    "test_fraction": 0.3
+  },
+  "gp_r2": 0.9186371287686901,
+  "gp_rmse": 0.7857962298311085,
+  "gp_calibration_within_2sigma": 0.9766666666666667,
+  "note": "Epistemic prior on Step 4 sensitivity coefficients is now a REAL measured uncertainty (+/-10.6% multiplicative, from the 2-magnitude ANSYS refit spread for tip_coeff_per_frac, 2026-08-27) -- was a documented +/-25% placeholder before the d_tip-only scope change. GP surrogate trained directly on the raw 24-blade mistuning pattern (no Fourier/summary-stat compression, see build_gp_features() docstring for why the earlier compressed representation was replaced 2026-08-21). See CONFIG in step5.py."
+}

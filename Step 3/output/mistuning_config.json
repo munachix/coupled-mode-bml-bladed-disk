@@ -1,0 +1,18 @@
+{
+  "generated_utc": "2026-08-29T02:44:15.101806+00:00",
+  "n_blades": 24,
+  "n_samples": 1000,
+  "random_seed": 42,
+  "baseline_geometry": {
+    "outer_radius_mm": 302.92635083621036,
+    "tip_z_extent_mm": 36.42666604
+  },
+  "tolerances_resolved": {
+    "d_tip": {
+      "std": 0.7285333208,
+      "unit": "mm",
+      "correlation_length_blades": 2.0
+    }
+  },
+  "note": "Tolerance magnitudes are generic literature-typical placeholders, not measured manufacturing/inspection data. See CONFIG in step3.py."
+}
